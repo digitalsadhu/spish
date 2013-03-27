@@ -12,7 +12,10 @@ function(app) {
     },
 
     index: function() {
-        //var layout = new Backbone.layout();
+        
+
+        
+
     }
   });
 

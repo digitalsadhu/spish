@@ -1,2 +1,4 @@
 .editorconfig
 app/.DS_Store
+app/scripts/vendor/.DS_Store
+app/scripts/vendor/bootstrap/.DS_Store

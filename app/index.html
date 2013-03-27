@@ -9,7 +9,6 @@
     <title></title>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width"/>
-
     <link rel="stylesheet" href="styles/index.css"/>
 </head>
 <body>
@@ -25,11 +24,13 @@
                 <a class="brand" href="#">Spish v0.1</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
                         <li><a href="https://github.com/digitalsadhu/spish">Github</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
+                <div class="btn-group pull-right">
+                    <button class="btn btn-success active">Live</button>
+                    <button class="btn btn-danger">Debug</button>
+                </div>
             </div>
         </div>
     </div>
@@ -44,21 +45,55 @@
         <div class="row">
             
             <div class="span4">
-                <h2>Configuration</h2>
-                <p class="text-info">Setup various parameters for the current site.</p>
-            
-                <h2>People</h2>
-                <p class="text-info">Add email addresses for people you wish to be notified when suspicious files are found</p>
-                <div class="input-prepend input-append">
-                    <span class="add-on"><i class="icon-envelope"></i></span>
-                    <input id="prependedInput" type="text" placeholder="Enter email address">
-                    <button class="btn" type="button">Add</button>
+                
+                <div>
+                    <h2>Site name</h2>
+                    <p class="text-info">Set the name of the site.</p>
+                    <input class="span4" type="text" name="tolerance" id="tolerance">
                 </div>
                 <div>
-                    <table class="emails">
-                        <tr><td>richie@mediasuite.co.nz</td><td><i class="icon-remove-circle"></td></tr>
-                        <tr><td>george@mediasuite.co.nz</td><td><i class="icon-remove-circle"></td></tr>
-                    </table>
+                    <h2>Directory</h2>
+                    <p class="text-info">Set the base directory to start scan from.</p>
+                    <input class="span4" type="text" name="tolerance" id="tolerance">
+                </div>
+                <div>
+                    <h2>Tolerance</h2>
+                    <p class="text-info">Set how back the script should scan for modified files.</p>
+                    <input class="span3" type="range" name="points" min="1" max="48"><input class="span1" type="text" name="tolerance" id="tolerance">
+                </div>
+                <div>
+                    <h2>People</h2>
+                    <p class="text-info">Add email addresses for people you wish to be notified when suspicious files are found</p>
+                    <div class="input-prepend input-append">
+                        <span class="add-on"><i class="icon-envelope"></i></span>
+                        <input id="prependedInput" type="text" placeholder="Enter email address">
+                        <button class="btn" type="button">Add</button>
+                    </div>
+                    <div>
+                        <table class="emails">
+                            <tr><td>richie@mediasuite.co.nz</td><td><i class="icon-remove-circle"></td></tr>
+                            <tr><td>george@mediasuite.co.nz</td><td><i class="icon-remove-circle"></td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2>Send grid</h2>
+                    <p class="text-info">Set send grid details for email sending.</p>
+                    <div class="input-prepend">
+                        <label class="add-on" for="sendgrid-username">
+                            username:
+                        </label>
+                        <input class="span3" type="text" name="sendgrid-username" 
+                            id="sendgrid-username">
+                    </div>
+                    <div class="input-prepend">
+                        <label class="add-on" for="sendgrid-password">
+                            password:
+                        </label>
+                        <input class="span3" type="text" name="sendgrid-password" 
+                            id="sendgrid-password">
+                    </div>
+                    
                 </div>
             </div>
             <div class="span8">
@@ -74,7 +109,7 @@
         <hr>
 
         <footer>
-            <p>&copy; Richard Walker 2013</p>
+            <p>&copy; Richard Walker | Mediasuite 2013</p>
         </footer>
 
     </div> <!-- /container -->
